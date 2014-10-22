@@ -20,6 +20,15 @@ gulp.task('styles', function () {
         .pipe($.size());
 });
 
+gulp.task('uncss', function () {
+    return gulp.src('.tmp/styles/*.css')
+        .pipe($.uncss({
+            html: ['app/index.html']
+        }))
+        .pipe(gulp.dest('.tmp/styles'))
+        .pipe($.size());
+});
+
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
         .pipe($.jshint())
@@ -27,7 +36,7 @@ gulp.task('scripts', function () {
         .pipe($.size());
 });
 
-gulp.task('html', ['styles', 'scripts'], function () {
+gulp.task('html', ['styles', 'uncss', 'scripts'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
 

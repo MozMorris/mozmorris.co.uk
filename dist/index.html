@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js wf-loading">
     <head>
         <meta charset="utf-8">
         <title>Moz Morris - Web Developer</title>
@@ -10,22 +10,18 @@
 
         <script src="scripts/vendor/modernizr.js"></script>
     </head>
-    <body>
+    <body class="">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-xs-12 col-md-9">
-                    <h1>About</h1>
+                    <h1>Hello</h1>
 
                     <p>
                         I am Moz Morris.
                     </p>
 
                     <p>
-                        I develop web sites &amp; apps.
-                    </p>
-
-                    <p>
-                        To other techies, I'm known as a full stack web developer.
+                        I'm a full stack web developer. I develop web sites &amp; apps.
                     </p>
 
                     <p>
@@ -35,22 +31,22 @@
                     </p>
 
                     <p>
-                        Then sometimes I <a href="http://www.mozmorris.com/">write about it</a>.
+                        Sometimes I <a href="http://www.mozmorris.com/">write about it</a>.
                     </p>
 
                     <p>
-                        I work with digital agencies and businesses to build good stuff.
+                        I work with digital agencies and businesses to build great stuff.
                     </p>
 
                     <p>
-                        I'm sure I can help you as well, so <a href="mailto:moz@earthview.co.uk">email me</a>.
+                        I'd love to help you too, so <a href="mailto:moz@earthview.co.uk">email me</a>.
                     </p>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-xs-12 col-md-9">
-                    <h2>Work</h2>
+                    <h2>Great Stuff</h2>
 
                     <p>
                         <a href="http://www.headstream.com">headstream.com</a> <small>Sep&nbsp;2014</small>
@@ -69,9 +65,13 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-12 col-md-9 clients">
+                <div class="col-xs-12">
                     <h2>Clients</h2>
+                </div>
+            </div>
 
+            <div class="row">
+                <div class="col-sm-4 clients">
                     <p>
                         <a href="https://www.bon-voyage.co.uk/">Bon Voyage</a>
                     </p>
@@ -85,15 +85,17 @@
                     </p>
 
                     <p>
-                        <a href="http://www.headstream.com/">Headstream</a>
+                        <a href="http://www.fivebyfiveuk.com/">Headstream</a>
                     </p>
+                </div>
 
+                <div class="col-sm-4 col-sm-offset-1 clients">
                     <p>
                         <a href="http://www.sideshowagency.com/">Sideshow</a>
                     </p>
 
                     <p>
-                        <a href="http://socialyou.co.uk/">Social You</a>
+                        <a href="http://www.socialyou.co.uk/">Social You</a>
                     </p>
 
                     <p>
@@ -125,7 +127,22 @@
             </div>
         </div>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script type="text/javascript">
+            WebFontConfig = {
+                google: { families: [ 'Roboto+Slab:400:latin' ] }
+            };
+
+            (function() {
+                var wf = document.createElement('script');
+                wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                  '://ajax.googleapis.com/ajax/libs/webfont/1.5.3/webfont.js'
+                wf.type = 'text/javascript';
+                wf.async = 'true';
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(wf, s);
+            })();
+        </script>
+
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
