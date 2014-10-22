@@ -12,7 +12,10 @@ gulp.task('styles', function () {
             style: 'expanded',
             precision: 10
         }))
-        .pipe($.autoprefixer('last 1 version'))
+        .pipe($.autoprefixer('last 5 versions'))
+        .pipe($.uncss({
+            html: ['app/index.html']
+        }))
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
 });
