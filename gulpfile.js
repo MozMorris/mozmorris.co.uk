@@ -2,6 +2,7 @@
 // generated on 2014-10-22 using generator-gulp-webapp 0.1.0
 
 var gulp = require('gulp');
+var critical = require('critical');
 
 // load plugins
 var $ = require('gulp-load-plugins')();
@@ -105,6 +106,27 @@ gulp.task('connect', function () {
 
 gulp.task('serve', ['connect', 'styles'], function () {
     require('opn')('http://localhost:9000');
+});
+
+gulp.task('copystyles', function () {
+    return gulp.src(['dist/styles/main.css'])
+        .pipe($.rename({
+            basename: 'site'
+        }))
+        .pipe(gulp.dest('dist/styles'));
+});
+
+gulp.task('critical', ['build', 'copystyles'], function (cb) {
+
+    critical.generateInline({
+        base: 'dist/',
+        src: 'index.html',
+        styleTarget: 'styles/main.css',
+        htmlTarget: 'index.html',
+        width: 320,
+        height: 480,
+        minify: true
+    }, cb);
 });
 
 // inject bower components
