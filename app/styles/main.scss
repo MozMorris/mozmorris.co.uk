@@ -9,22 +9,17 @@ $font-family-base: 'Roboto Slab', serif;
 // endbower
 
 // hide FOUT - This is crude, but it works for this simple page.
-.wf-loading {
-    h1,
-    h2,
-    p {
-        opacity: 0;
-    }
+h1,
+h2,
+p {
+    opacity: 0;
 
-    // show text when js is disabled
-    &.no-js {
-        h1,
-        h2,
-        p {
-            opacity: 1;
-        }
+    .wf-active & {
+        opacity: 1;
     }
 }
+
+
 
 // typography
 h1,

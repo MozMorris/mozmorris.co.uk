@@ -14,14 +14,11 @@ gulp.task('styles', function () {
             precision: 10
         }))
         .pipe($.autoprefixer('last 5 versions'))
-        .pipe($.uncss({
-            html: ['app/index.html']
-        }))
         .pipe(gulp.dest('.tmp/styles'))
         .pipe($.size());
 });
 
-gulp.task('uncss', function () {
+gulp.task('uncss', ['styles'], function () {
     return gulp.src('.tmp/styles/*.css')
         .pipe($.uncss({
             html: ['app/index.html']
@@ -37,7 +34,7 @@ gulp.task('scripts', function () {
         .pipe($.size());
 });
 
-gulp.task('html', ['styles', 'uncss', 'scripts'], function () {
+gulp.task('html', ['uncss', 'scripts'], function () {
     var jsFilter = $.filter('**/*.js');
     var cssFilter = $.filter('**/*.css');
 
@@ -116,8 +113,7 @@ gulp.task('copystyles', function () {
         .pipe(gulp.dest('dist/styles'));
 });
 
-gulp.task('critical', ['build', 'copystyles'], function (cb) {
-
+gulp.task('critical', ['copystyles'], function (cb) {
     critical.generateInline({
         base: 'dist/',
         src: 'index.html',

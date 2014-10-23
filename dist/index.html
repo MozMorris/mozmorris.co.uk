@@ -1,12 +1,17 @@
 <!doctype html>
-<html class="no-js wf-loading">
+<html>
     <head>
         <meta charset="utf-8">
         <title>Moz Morris - Web Developer</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="styles/main.css">
+        <style type="text/css">
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}a{background:0 0}h1{margin:.67em 0}@media print{*{text-shadow:none!important;color:#000!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important}a{text-decoration:underline}a[href]:after{content:" (" attr(href)")"}p{orphans:3;widows:3}}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:62.5%;-webkit-tap-highlight-color:transparent}body{font-family:"Roboto Slab",serif;font-size:24px;line-height:1.2}a{color:#428bca;text-decoration:none}h1{font-family:inherit;line-height:1.1;margin-top:28px;margin-bottom:14px}p{margin:0 0 14px}.container-fluid{margin-right:auto;margin-left:auto;padding-left:15px;padding-right:15px}.container-fluid:after,.container-fluid:before{content:" ";display:table}.container-fluid:after{clear:both}.row{margin-left:-15px;margin-right:-15px}.row:after,.row:before{content:" ";display:table}.row:after{clear:both}.col-md-9,.col-xs-12{position:relative;min-height:1px;padding-left:15px;padding-right:15px}.col-xs-12{float:left;width:100%}@media (min-width:992px){.col-md-9{float:left;width:75%}}h1,p{opacity:0}h1{font-size:24px;font-weight:400;color:#d9534f}body{background-color:#eee;-webkit-box-shadow:inset 0 0 50px rgba(153,153,153,.5);box-shadow:inset 0 0 50px rgba(153,153,153,.5);color:#333}@media screen and (min-width:768px){body,h1{font-size:32px}body{padding:20px}}@media screen and (min-width:992px){body,h1{font-size:40px}}
+</style>
+<noscript>
+<link rel="stylesheet" href="styles/main.css">
+</noscript>
     </head>
     <body class="">
         <div class="container-fluid">
@@ -19,7 +24,7 @@
                     </p>
 
                     <p>
-                        I'm a full stack web developer. I develop web sites &amp; apps.
+                        I&apos;m a full stack web developer. I develop web sites &amp; apps.
                     </p>
 
                     <p>
@@ -37,7 +42,7 @@
                     </p>
 
                     <p>
-                        I'd love to help you too, so <a href="mailto:moz@earthview.co.uk">email me</a>.
+                        I&apos;d love to help you too, so <a href="mailto:moz@earthview.co.uk">email me</a>.
                     </p>
                 </div>
             </div>
@@ -47,17 +52,17 @@
                     <h2>Great Stuff</h2>
 
                     <p>
-                        <a href="http://www.headstream.com">headstream.com</a> <small>Sep&nbsp;2014</small>
+                        <a href="http://www.headstream.com">headstream.com</a> <small>Sep&#xA0;2014</small>
                     </p>
 
                     <p>
-                        <a href="http://www.bon-voyage.co.uk">bon-voyage.co.uk</a> <small>May&nbsp;2014</small>
+                        <a href="http://www.bon-voyage.co.uk">bon-voyage.co.uk</a> <small>May&#xA0;2014</small>
                     </p>
 
                     <p>
-                        <a href="http://www.breastcancercampaign.org/findthecures/">Breast Cancer Campaign</a> <small>November&nbsp;2013</small></p>
+                        <a href="http://www.breastcancercampaign.org/findthecures/">Breast Cancer Campaign</a> <small>November&#xA0;2013</small></p>
                     <p>
-                        <a href="http://www.clipper-teas.com/">clipper-teas.com</a> <small>June&nbsp;2013</small>
+                        <a href="http://www.clipper-teas.com/">clipper-teas.com</a> <small>June&#xA0;2013</small>
                     </p>
                 </div>
             </div>
@@ -68,8 +73,8 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div class="col-sm-4 clients">
+            <div class="row clients">
+                <div class="col-sm-4">
                     <p>
                         <a href="https://www.bon-voyage.co.uk/">Bon Voyage</a>
                     </p>
@@ -87,7 +92,7 @@
                     </p>
                 </div>
 
-                <div class="col-sm-4 col-sm-offset-1 clients">
+                <div class="col-sm-4 col-sm-offset-1">
                     <p>
                         <a href="http://www.sideshowagency.com/">Sideshow</a>
                     </p>
@@ -125,6 +130,12 @@
             </div>
         </div>
 
+        <script>
+            function loadCSS(e,t,n){"use strict";var i=window.document.createElement("link");var o=t||window.document.getElementsByTagName("script")[0];i.rel="stylesheet";i.href=e;i.media="only x";o.parentNode.insertBefore(i,o);setTimeout(function(){i.media=n||"all"})}
+            loadCSS('styles/site.css');
+        </script>
+
+
         <script type="text/javascript">
             WebFontConfig = {
                 google: { families: [ 'Roboto+Slab:400:latin' ] }
@@ -145,9 +156,12 @@
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
+            e.src=('https:' == document.location.protocol ? 'https' : 'http') + '://www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-25645110-1');ga('send','pageview');
         </script>
+<script>
+(function(d,u){for (var i in u) {var l=d.createElement('link');var r=d.getElementsByTagName('script')[0];l.type='text/css';l.rel='stylesheet';l.media='only x';l.href=u[i];r.parentNode.insertBefore(l,r);(function(l){setTimeout( function(){l.media='all';});})(l)}}(document,['styles/main.css']));
+</script>
 </body>
 </html>
