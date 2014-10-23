@@ -8,7 +8,6 @@ $font-family-base: 'Roboto Slab', serif;
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
-// hide FOUT - This is crude, but it works for this simple page.
 h1,
 h2,
 p {
@@ -18,8 +17,6 @@ p {
         opacity: 1;
     }
 }
-
-
 
 // typography
 h1,
@@ -34,6 +31,8 @@ body {
     background-color: $gray-lighter;
     color: $gray-dark;
     box-shadow: inset 0 0 50px rgba($gray-light,.5);
+    opacity: 0;
+    animation: fade .5s .2s ease-in forwards;
 }
 
 .clients a {
@@ -67,4 +66,14 @@ body {
         font-size: 40px;
     }
 
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
