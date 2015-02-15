@@ -48,6 +48,7 @@ gulp.task('html', ['uncss', 'scripts'], function () {
         .pipe(cssFilter.restore())
         .pipe($.useref.restore())
         .pipe($.useref())
+        .pipe($.minifyHtml())
         .pipe(gulp.dest('dist'))
         .pipe($.size());
 });
