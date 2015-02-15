@@ -8,16 +8,6 @@ $font-family-base: 'Roboto Slab', serif;
 @import "../bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss";
 // endbower
 
-h1,
-h2,
-p {
-    opacity: 0;
-
-    .wf-active & {
-        opacity: 1;
-    }
-}
-
 // typography
 h1,
 h2 {

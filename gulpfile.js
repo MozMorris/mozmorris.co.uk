@@ -105,19 +105,11 @@ gulp.task('serve', ['connect', 'styles'], function () {
     require('opn')('http://0.0.0.0:9000');
 });
 
-gulp.task('copystyles', function () {
-    return gulp.src(['dist/styles/main.css'])
-        .pipe($.rename({
-            basename: 'site'
-        }))
-        .pipe(gulp.dest('dist/styles'));
-});
-
-gulp.task('critical', ['copystyles'], function (cb) {
+gulp.task('critical', function (cb) {
     critical.generateInline({
         base: 'dist/',
         src: 'index.html',
-        styleTarget: 'styles/main.css',
+        styleTarget: 'styles/inline.css',
         htmlTarget: 'index.html',
         width: 320,
         height: 480,
