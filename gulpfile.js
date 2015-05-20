@@ -103,7 +103,7 @@ gulp.task('connect', function () {
 });
 
 gulp.task('serve', ['connect', 'styles'], function () {
-    require('opn')('http://0.0.0.0:9000');
+    require('opn')('http://localhost:9000');
 });
 
 gulp.task('critical', function (cb) {

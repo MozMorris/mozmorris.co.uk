@@ -3,7 +3,7 @@
 ### Development
 
     $ npm install && bower install
-    $ gulp watch
+    $ npm run watch
 
 ### Build
 
