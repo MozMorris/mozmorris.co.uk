@@ -34,6 +34,6 @@
   },
   "scripts": {
     "watch": "gulp watch",
-    "build": "gulp"
+    "build": "gulp && gulp critical"
   }
 }

@@ -7,4 +7,4 @@
 
 ### Build
 
-    $ gulp
+    $ npm run build
