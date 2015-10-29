@@ -106,16 +106,17 @@ gulp.task('serve', ['connect', 'styles'], function () {
     require('opn')('http://localhost:9000');
 });
 
-gulp.task('critical', function (cb) {
-    critical.generateInline({
-        base: 'dist/',
+gulp.task('critical', function () {
+    critical.generate({
+        inline: true,
+        base: './dist',
         src: 'index.html',
-        styleTarget: 'styles/inline.css',
-        htmlTarget: 'index.html',
+        dest: 'dist/index.html',
+        minify: true,
         width: 320,
         height: 480,
-        minify: true
-    }, cb);
+        ignore: ['animation']
+    });
 });
 
 // inject bower components
