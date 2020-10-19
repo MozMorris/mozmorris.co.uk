@@ -111,11 +111,13 @@ gulp.task('critical', function () {
         inline: true,
         base: './dist',
         src: 'index.html',
-        dest: 'dist/index.html',
+        target: 'index.html',
         minify: true,
         width: 320,
         height: 480,
-        ignore: ['animation']
+        ignore: {
+            rule: [/animation/]
+        },
     });
 });
 
